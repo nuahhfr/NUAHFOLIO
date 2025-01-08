@@ -28,7 +28,7 @@ body {
 }
 
 #logo img {
-    max-width: 300px; 
+    max-width: 400px; 
     margin-bottom: 20px;
 }
 
@@ -42,10 +42,11 @@ body {
 
 .image-container {
     position: absolute;
-    max-width: 375px; 
+    max-width: 425px; 
     z-index: 1;
     transition: z-index 0.3s ease, opacity 1s ease;
     opacity: 0;
+    cursor: p ointer;
 }
 
 .image-container img {
@@ -53,8 +54,32 @@ body {
     width: 100%;
     height: auto;
     border-radius: 3px; 
+    cursor: zoom-in;
+}
+/* Style des images statiques */
+#static-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 150px); /* Ajustement par rapport au logo */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
+.static-image {
+    width: auto;
+    height: 60px;
+    margin-bottom: 10px; /* Espacement de 20px entre chaque image */
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Effet au survol */
+}
+
+.static-image:hover {
+    transform: scale(1.1); /* Agrandissement au survol */
+    opacity: 0.8;
+}
 .overlay-image {
     position: absolute;
     top: 0;
@@ -63,6 +88,7 @@ body {
     height: 100%;
     position: absolute;  
     z-index: 2;
+    cursor: help;
 }
 
 .close-button {
